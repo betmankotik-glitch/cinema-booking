@@ -13,5 +13,6 @@ def cancel_booking(booking_id):
     bookings = [b for b in bookings if b["id"] != booking_id]
     return True
 
-
+def get_stats():
+    return {"total_bookings": len(bookings)}
 
