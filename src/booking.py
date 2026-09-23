@@ -13,5 +13,7 @@ def cancel_booking(booking_id):
     bookings = [b for b in bookings if b["id"] != booking_id]
     return True
 
+def calculate_discount(price, percent):
+    return price * (1 - percent / 100)
 
 
