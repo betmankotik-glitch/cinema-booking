@@ -14,3 +14,9 @@ def add_movie(title, genre):
 def get_movie_by_id(movie_id):
     return next((m for m in movies_db if m["id"] == movie_id), None)
 
+favorites = []
+
+def add_to_favorites(movie_id):
+    favorites.append(movie_id)
+    return favorites
+
