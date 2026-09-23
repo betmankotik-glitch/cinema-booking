@@ -8,3 +8,10 @@ def book_ticket(movie_id, tickets_count):
 def get_user_bookings():
     return bookings
 
+def cancel_booking(booking_id):
+    global bookings
+    bookings = [b for b in bookings if b["id"] != booking_id]
+    return True
+
+
+
