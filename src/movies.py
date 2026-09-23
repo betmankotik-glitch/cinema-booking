@@ -14,3 +14,5 @@ def add_movie(title, genre):
 def get_movie_by_id(movie_id):
     return next((m for m in movies_db if m["id"] == movie_id), None)
 
+def search_movies(query):
+    return [m for m in movies_db if query.lower() in m["title"].lower()]
